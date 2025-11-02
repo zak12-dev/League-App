@@ -120,3 +120,7 @@
     @apply bg-background text-foreground;
   }
 }
+.font-nba {
+  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
