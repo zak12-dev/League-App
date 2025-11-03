@@ -28,7 +28,7 @@ export default function NavigationMenuDemo() {
     { name: "Stats", href: "/stats" },
     { name: "Classement", href: "/classement" },
     { name: "Vidéos", href: "/videos" },
-    { name: "Boutique", href: "/videos" },
+    { name: "Boutique", href: "/Boutique" },
   ];
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 

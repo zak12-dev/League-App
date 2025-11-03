@@ -17,7 +17,7 @@ export default function LoginButton() {
     return (
       <Button
         onClick={handleLogin}
-        className="bg-[#EF8624] hover:bg-orange-400 text-white ]"
+        className="bg-gradient-to-r from-[#EF8624] to-[#FFB347]  hover:bg-orange-400 text-white ] rounded-full"
       >
         Se connecter
       </Button>

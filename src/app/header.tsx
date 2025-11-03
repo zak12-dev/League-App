@@ -13,7 +13,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full mx-auto bg-[#111111ef] text-white">
+    <header className=" w-full mx-auto bg-[#111111ef] text-white">
       {/* Desktop - inchangé */}
       <div className="hidden md:flex items-center justify-between px-3 py-4">
         {/* Logo */}
