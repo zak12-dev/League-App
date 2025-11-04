@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Description
 
-## Getting Started
+Ce projet est une application web pour gérer et visualiser une ligue de basketball.
+Elle permet de :
 
-First, run the development server:
+Afficher les équipes et leurs statistiques (victoire, défaite, points, etc.)
 
-```bash
+Consulter les joueurs et coachs par équipe et par poste
+
+Filtrer les joueurs par nom et saison
+
+Visualiser le classement des équipes
+
+Consulter le calendrier des matchs avec scores si disponibles
+
+L’interface est construite avec React, Next.js, TypeScript, et Tailwind CSS, avec des animations Framer Motion.
+
+🔧 Installation
+Prérequis
+
+Node.js ≥ 18
+
+npm ou yarn
+
+Étapes
+
+Cloner le dépôt
+
+git clone https://github.com/ton-utilisateur/basketball-league.git
+cd basketball-league
+
+
+Installer les dépendances
+
+npm install
+# ou
+yarn install
+
+
+Lancer l’application en développement
+
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Ouvrir l’application
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ouvrir [http://localhost:3000](https://league-app-pi.vercel.app/)
+ dans le navigateur.
 
-## Learn More
+🚀 Guide de démarrage
 
-To learn more about Next.js, take a look at the following resources:
+La page principale affiche les équipes et leurs onglets (Équipe, Liste, Jeux, Stats).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dans l’onglet Liste, vous pouvez filtrer les joueurs et coachs par nom ou par saison.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+La page Classement affiche le classement des équipes avec victoire, défaite et points.
 
-## Deploy on Vercel
+La page Calendrier affiche la liste des matchs avec date et score si disponible.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Navigation :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Chaque équipe est sélectionnable via son slug.
+
+Les joueurs sont regroupés par poste (PG, SG, SF, etc.) et filtrés par équipe.
+
+Les coachs sont filtrés par équipe et par recherche.
+
+🏗️ Architecture du projet
+basketball-league/
+│
+├─ app/
+│  ├─ equipes/
+│  │  ├─ _components/
+│  │  │  ├─ FilterPlayer.tsx
+│  │  │  ├─ PlayerCard.tsx
+│  │  │  ├─ CoachCard.tsx
+│  │  │  └─ Herostat.tsx
+│  │  ├─ [slug]/
+│  │  │  └─ page.tsx   # Détail d'une équipe
+│  │  ├─ Classement.tsx
+│  │  └─ Calendrier.tsx
+│  └─ page.tsx          # Page d'accueil
+│
+├─ data/
+│  ├─ players.ts
+│  ├─ coaches.ts
+│  ├─ teams.ts
+│  ├─ seasons.ts
+│  └─ games.ts
+│
+├─ types/
+│  └─ ligue.ts          # Types TS pour Player, Coach, Team
+│
+├─ components/
+│  ├─ ui/               # Composants UI (Select, Button, Separator, etc.)
+│
+├─ styles/
+│  └─ globals.css
+│
+├─ package.json
+└─ tsconfig.json
+
+
+Stack technique :
+
+Next.js (App Router) pour la structure des pages et le rendu côté serveur.
+
+React + TypeScript pour la robustesse du code et typage fort.
+
+Tailwind CSS pour le style et la réactivité.
+
+Framer Motion pour les animations sur les onglets et cartes.
