@@ -26,7 +26,7 @@ export default function TeamPage() {
           className="object-cover h-[700px] w-full"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <div className="text-center text-white -mt-40">
+          <div className="text-center text-white -mt-10">
             <Image
               src={team.logo}
               alt={team.name}
