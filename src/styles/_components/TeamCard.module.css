@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+
+.card {
+  @apply cursor-pointer overflow-hidden shadow-md shadow-[#FFB347] h-[100px]
+         transition-all duration-300 rounded-xl bg-white border border-gray-200;
+}
+
+.cardContent {
+  @apply py-2 flex  items-center space-x-3;
+}
+
+.logoContainer {
+  @apply w-10 h-10  overflow-hidden border border-white;
+}
+
+.logo {
+  @apply w-full h-full object-cover;
+}
+
+.title {
+  @apply text-xl font-bold text-black;
+}

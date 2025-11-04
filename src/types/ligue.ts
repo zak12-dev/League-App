@@ -14,8 +14,18 @@ export interface League {
 /* ──────────────────────────────────────────────── */
 export interface Team {
   id: string;
+  slug: string;
   name: string;
+  victoire: number;
+  defaite: number;
   city: string;
+  matchesPlayed: number;
+  pointsFor: number;
+  pointsAgainst: number;
+  conference: string;
+  group: string;
+  heroImage: string;
+  seasons: string[];
   logo: string;
   players: Player[];
   coaches: Coach[];
@@ -115,10 +125,13 @@ export interface TeamPlayerStats {
 
 export interface Player {
   id: string;
-  name: string;
+  teamSlug: string;
+  number: number;
+  nom: string;
+  prenom: string;
   height: number;
   nationality: string;
-  position: "PG" | "SG" | "SF" | "PF" | "C";
+  position: "Guards" | "Centers" | "Forwards";
   birthDate: string;
   socials?: PlayerSocials;
   photo: string;
@@ -128,7 +141,9 @@ export interface Player {
 
 export interface Coach {
   id: string;
-  name: string;
+  teamSlug: string;
+  nom: string;
+  prenom: string;
   role: string;
   photo?: string;
 }

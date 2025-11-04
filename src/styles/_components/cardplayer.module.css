@@ -1,0 +1,53 @@
+@reference "tailwindcss";
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 380px;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: solid #ffffff;
+}
+
+.nom {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+  margin-left: -150px;
+}
+.prenom {
+  font-size: 14px;
+  font-weight: 300;
+  color: #111827;
+  margin-bottom: 4px;
+  margin-left: -150px;
+}
+
+.position {
+  font-size: 25px;
+  color: black;
+  font-weight: 700;
+  margin-right: 20;
+}
