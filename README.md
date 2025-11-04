@@ -67,40 +67,6 @@ Les joueurs sont regroupés par poste (PG, SG, SF, etc.) et filtrés par équipe
 
 Les coachs sont filtrés par équipe et par recherche.
 
-🏗️ Architecture du projet
-basketball-league/
-│
-├─ app/
-│  ├─ equipes/
-│  │  ├─ _components/
-│  │  │  ├─ FilterPlayer.tsx
-│  │  │  ├─ PlayerCard.tsx
-│  │  │  ├─ CoachCard.tsx
-│  │  │  └─ Herostat.tsx
-│  │  ├─ [slug]/
-│  │  │  └─ page.tsx   # Détail d'une équipe
-│  │  ├─ Classement.tsx
-│  │  └─ Calendrier.tsx
-│  └─ page.tsx          # Page d'accueil
-│
-├─ data/
-│  ├─ players.ts
-│  ├─ coaches.ts
-│  ├─ teams.ts
-│  ├─ seasons.ts
-│  └─ games.ts
-│
-├─ types/
-│  └─ ligue.ts          # Types TS pour Player, Coach, Team
-│
-├─ components/
-│  ├─ ui/               # Composants UI (Select, Button, Separator, etc.)
-│
-├─ styles/
-│  └─ globals.css
-│
-├─ package.json
-└─ tsconfig.json
 
 
 Stack technique :
